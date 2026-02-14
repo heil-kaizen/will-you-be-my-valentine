@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine?</title>
+    <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/heil-kaizen/valentine-checker-/main/pink-glass-heart-symbol-love-affection_191095-83819.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ['Pacifico', 'cursive'],
+              body: ['Quicksand', 'sans-serif'],
+            },
+            colors: {
+              valentine: {
+                50: '#fff0f3',
+                100: '#ffccd5',
+                200: '#ffb3c1',
+                300: '#ff8fa3',
+                400: '#ff758f',
+                500: '#ff4d6d',
+                600: '#c9184a',
+                700: '#a80038',
+                800: '#800f2f',
+                900: '#590d22',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'rise': 'rise 15s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              rise: {
+                '0%': { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: '0' },
+                '10%': { opacity: '0.6' },
+                '50%': { opacity: '0.6', transform: 'translateY(-60vh) translateX(20px) rotate(180deg)' },
+                '100%': { transform: 'translateY(-120vh) translateX(-20px) rotate(360deg)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff0f3;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff4d6d;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-valentine-50 text-slate-800 font-body antialiased selection:bg-valentine-200 selection:text-valentine-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
